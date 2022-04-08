@@ -2,11 +2,8 @@
 *{
     @include reset(); 
 }
-
-
 // color background
 $base-color: yellow;
-
 
 body{
     background-color: $base-color;
@@ -25,7 +22,6 @@ body{
         background: #232f7d; 
     }
 }
-
 .container{
     @include w-h(100%,auto);
     @include grid-c($gar:minmax(50px,auto));
@@ -109,8 +105,6 @@ body{
                 }
             }
         }
-
-
         // -------------------------------------------------- hro2 & hro3
         .hro2, .hro3{
             @include disp-flex(flex-start,center,column);
@@ -200,26 +194,6 @@ body{
         }
 
     }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // --- AKHIR HERO IMG
@@ -709,8 +683,6 @@ body{
         }
     }
 
-
-
     // ------------------------------------------------------------------------- responsive
     @media only screen and (max-width: 768px){
         nav{
@@ -754,24 +726,7 @@ body{
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// ------------------------------- menu settings
 .menuSetting{
     position: fixed;
     width: 70%;
@@ -842,12 +797,7 @@ body{
             }
         }
     }
-
-
-
-
-
-
+// tampilan popup menu settings
 }
 .display{
     display: block;
