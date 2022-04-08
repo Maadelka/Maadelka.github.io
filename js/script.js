@@ -6,9 +6,6 @@ burger.addEventListener('click',function(){
     dropd.classList.toggle('muncul')
     burger.classList.toggle('putar')
 })
-// --
-
-
 
 // --------------------------------------------------------------- img slide (hero img)
 let heroImg = document.getElementById('heroImg')
@@ -58,33 +55,6 @@ next.addEventListener('click',function(){
     heroImg.src= `assets/hero-img/${nameImg[urutanImg]}`
 })
 
-// --------- titik
-// titik.addEventListener('click',function(){     !!!!!!!!!!!!
-//     alert('berhasil ')
-// })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ----------------------------- menu setting
 let menuSetting = document.getElementById('menuSetting')
 let setting = document.getElementById('setting')
@@ -119,7 +89,7 @@ function openFullscreen() {
     }
     
 }
-  
+ 
 /* Function to close fullscreen mode */
 function closeFullscreen() {
     closeS.classList.add('aktifScreen')
@@ -136,13 +106,9 @@ function closeFullscreen() {
     
 }
   
-
-
 if(window == onerror){
   alert(`ada yang salah`)
 }
-
-
 function gagal(){
   console.log(`gagal`)
 }
