@@ -59,6 +59,90 @@ next.addEventListener('click',function(){
 })
 
 // --------- titik
-titik.addEventListener('click',function(){
-    alert('berhasil   ')
+// titik.addEventListener('click',function(){     !!!!!!!!!!!!
+//     alert('berhasil ')
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// ----------------------------- menu setting
+let menuSetting = document.getElementById('menuSetting')
+let setting = document.getElementById('setting')
+let closeSetting = document.getElementById('closeSetting')
+setting.addEventListener('click',function(){
+    menuSetting.classList.add('display')
 })
+closeSetting.addEventListener('click',function(){
+    menuSetting.classList.remove('display')
+})
+
+
+
+// ---------------------------------------------- screen size 
+var elem = document.documentElement;
+let onS =document.getElementById('onS')
+let closeS =document.getElementById('closeS')
+
+/* Function to open fullscreen mode */
+function openFullscreen() {
+    closeS.classList.remove('aktifScreen')
+    onS.classList.add('aktifScreen')
+    if (elem.requestFullscreen) {
+      elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { 
+      elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { 
+      elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) {
+      elem = window.top.document.body;
+      elem.msRequestFullscreen();
+    }
+    
+}
+  
+/* Function to close fullscreen mode */
+function closeFullscreen() {
+    closeS.classList.add('aktifScreen')
+    onS.classList.remove('aktifScreen')
+    if (document.exitFullscreen) {
+      document.exitFullscreen();
+    } else if (document.mozCancelFullScreen) {
+      document.mozCancelFullScreen();
+    } else if (document.webkitExitFullscreen) {
+      document.webkitExitFullscreen();
+    } else if (document.msExitFullscreen) {
+      window.top.document.msExitFullscreen();
+    }
+    
+}
+  
+
+
+if(window == onerror){
+  alert(`ada yang salah`)
+}
+
+
+function gagal(){
+  console.log(`gagal`)
+}

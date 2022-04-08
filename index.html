@@ -8,6 +8,52 @@
     <title>Maadelka</title>
 </head>
 <body>
+
+
+<!-- popup menu setting -->
+<div class="menuSetting" id="menuSetting">
+    <div class="bj">
+        <h3>MENU SETTING</h3>
+        <i class="fa-solid fa-xmark fa-2x" id="closeSetting">X</i>
+    </div>
+
+    <div class="ukuranLayar">
+        <h4>Screen mode</h4>
+        <div>
+            <p>Fullscreen</p>
+            <p onclick="closeFullscreen();" class="aktifScreen tbl" id="closeS">OFF</p>
+            <p onclick="openFullscreen();" id="onS" class="tbl">ON</p>
+        </div>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="container">
 <!---------------------------------------------------------------------------------header  -->
     <header class="igrid">
@@ -103,6 +149,7 @@
                 <li>example</li>
                 <li>example</li>
                 <li>example</li>
+                <li class="setting" id="setting"><i class="fa-solid fa-gears"></i> setting</li>
             </ul>
             <!-- ----------------------------- TEKNOLOGI -->
             <div class="containerC teknologi">
@@ -324,7 +371,11 @@
     </footer>
 </div>
 
-<script src="https://kit.fontawesome.com/ca8f778503.js" crossorigin="anonymous"></script>
+
+
+
+
+<script src="https://kit.fontawesome.com/ca8f778503.js" crossorigin="anonymous" onerror="gagal(this)"></script>
 <script src="js/script.js"></script>
 </body>
 </html>

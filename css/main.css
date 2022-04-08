@@ -7,9 +7,14 @@
 }
 
 body {
-  background-color: #cdc7f5;
+  background-color: yellow;
+  background-color: rgb(169, 176, 255);
   user-select: none;
   overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 body::-webkit-scrollbar {
   width: 10px;
@@ -40,7 +45,7 @@ body::-webkit-scrollbar-thumb:hover {
   position: relative;
 }
 .container header .hro {
-  background-color: #cbddf1;
+  background-color: rgb(203, 221, 241);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -72,20 +77,20 @@ body::-webkit-scrollbar-thumb:hover {
   user-select: none;
 }
 .container header .hro1 .tombol-hero:hover {
-  color: #ededed;
+  color: rgb(237, 237, 237);
   background-color: rgba(255, 255, 255, 0.118);
 }
 .container header .hro1 .back {
   left: 0;
 }
 .container header .hro1 .back:hover {
-  box-shadow: 0 2px 4px black;
+  box-shadow: 0 2px 4px rgb(0, 0, 0);
 }
 .container header .hro1 .next {
   right: 0;
 }
 .container header .hro1 .next:hover {
-  box-shadow: 0 -2px 4px black;
+  box-shadow: 0 -2px 4px rgb(0, 0, 0);
 }
 .container header .hro1 .titikPage {
   position: absolute;
@@ -99,22 +104,22 @@ body::-webkit-scrollbar-thumb:hover {
 .container header .hro1 .titikPage .titik {
   width: 10px;
   height: 10px;
-  background-color: #f0f0f0;
+  background-color: rgb(240, 240, 240);
   border-radius: 50%;
   cursor: pointer;
   transition: 0.2s;
 }
 .container header .hro1 .titikPage .titik:hover {
-  background-color: #00ff11;
+  background-color: rgb(0, 255, 17);
   border: 1px solid black;
   box-sizing: border-box;
 }
 .container header .hro1 .titikPage .bg {
-  background-color: #00ff11;
+  background-color: rgb(0, 255, 17);
   border: 1px solid black;
   box-sizing: border-box;
 }
-.container header .hro2 {
+.container header .hro2, .container header .hro3 {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -123,40 +128,40 @@ body::-webkit-scrollbar-thumb:hover {
   overflow: hidden;
   cursor: pointer;
 }
-.container header .hro2 .timeUp {
+.container header .hro2 .timeUp, .container header .hro3 .timeUp {
   width: 100%;
   height: 5%;
-  background-image: linear-gradient(to right, #3240ff, black);
+  background-image: linear-gradient(to right, rgb(50, 64, 255), rgb(0, 0, 0));
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
   font-size: 0.8rem;
 }
-.container header .hro2 .timeUp span {
+.container header .hro2 .timeUp span, .container header .hro3 .timeUp span {
   color: wheat;
   padding: 2px;
   box-sizing: border-box;
 }
-.container header .hro2 .timeUp p {
+.container header .hro2 .timeUp p, .container header .hro3 .timeUp p {
   color: aliceblue;
 }
-.container header .hro2 .img {
+.container header .hro2 .img, .container header .hro3 .img {
   width: 100%;
   height: 100%;
-  background-color: #7b9af8;
+  background-color: rgb(123, 154, 248);
   overflow: hidden;
   position: relative;
   transition: 0.4s;
 }
-.container header .hro2 .img img {
+.container header .hro2 .img img, .container header .hro3 .img img {
   width: 100%;
   height: 100%;
   transition: 0.7s;
   margin: 0;
   transform: scale(1.1);
 }
-.container header .hro2 .keterangan {
+.container header .hro2 .keterangan, .container header .hro3 .keterangan {
   position: absolute;
   bottom: 0;
   color: white;
@@ -164,110 +169,28 @@ body::-webkit-scrollbar-thumb:hover {
   display: flex;
   flex-direction: column;
   z-index: 1;
+  background-image: linear-gradient(to right, rgba(50, 64, 255, 0.413), rgb(0, 0, 0));
 }
-.container header .hro2 .keterangan h3 {
+.container header .hro2 .keterangan h3, .container header .hro3 .keterangan h3 {
   padding: 4px;
   color: yellow;
   letter-spacing: 1px;
   filter: drop-shadow(0 0 2px black);
   text-align: center;
 }
-.container header .hro2 .keterangan p {
+.container header .hro2 .keterangan p, .container header .hro3 .keterangan p {
   text-align: start;
   letter-spacing: 1px;
-  color: #e1e1e1;
+  color: rgb(225, 225, 225);
   filter: drop-shadow(0 0 2px black);
   transition: 0.5s;
   padding: 2px;
-}
-.container header .hro2:hover .img img {
-  transform: scale(1.2);
-}
-.container header .hro2:hover .img::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  bottom: 0;
-  right: 0;
-  background-image: linear-gradient(to right, rgba(15, 25, 167, 0.257), rgba(0, 0, 0, 0.62));
-  z-index: 1;
-}
-.container header .hro2:hover .keterangan p {
-  color: white;
   background-image: linear-gradient(to right, rgba(8, 16, 121, 0.485), rgba(0, 0, 0, 0.62));
 }
-.container header .hro3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-.container header .hro3 .timeUp {
-  width: 100%;
-  height: 5%;
-  background-image: linear-gradient(to right, #3240ff, black);
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
-}
-.container header .hro3 .timeUp span {
-  color: wheat;
-  padding: 2px;
-  box-sizing: border-box;
-}
-.container header .hro3 .timeUp p {
-  color: aliceblue;
-}
-.container header .hro3 .img {
-  width: 100%;
-  height: 100%;
-  background-color: #7b9af8;
-  overflow: hidden;
-  position: relative;
-  background-image: linear-gradient(to right, rgba(15, 25, 167, 0.257), rgba(0, 0, 0, 0.62));
-  transition: 0.4s;
-}
-.container header .hro3 .img img {
-  width: 100%;
-  height: 100%;
-  transition: 0.7s;
-  margin: 0;
-  transform: scale(1.1);
-}
-.container header .hro3 .keterangan {
-  position: absolute;
-  bottom: 0;
-  color: white;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  z-index: 2;
-}
-.container header .hro3 .keterangan h3 {
-  padding: 4px;
-  color: yellow;
-  letter-spacing: 1px;
-  filter: drop-shadow(0 0 2px black);
-  text-align: center;
-}
-.container header .hro3 .keterangan p {
-  text-align: start;
-  letter-spacing: 1px;
-  color: #e1e1e1;
-  filter: drop-shadow(0 0 2px black);
-  transition: 0.5s;
-  padding: 2px;
-}
-.container header .hro3:hover .img img {
+.container header .hro2:hover .img img, .container header .hro3:hover .img img {
   transform: scale(1.2);
 }
-.container header .hro3:hover .img::before {
+.container header .hro2:hover .img::before, .container header .hro3:hover .img::before {
   content: "";
   position: absolute;
   top: 0;
@@ -277,8 +200,8 @@ body::-webkit-scrollbar-thumb:hover {
   background-image: linear-gradient(to right, rgba(15, 25, 167, 0.257), rgba(0, 0, 0, 0.62));
   z-index: 1;
 }
-.container header .hro3:hover .keterangan p {
-  color: white;
+.container header .hro2:hover .keterangan p, .container header .hro3:hover .keterangan p {
+  color: rgb(255, 255, 255);
   background-image: linear-gradient(to right, rgba(8, 16, 121, 0.485), rgba(0, 0, 0, 0.62));
 }
 .container nav {
@@ -290,7 +213,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row;
   justify-content: auto;
   align-items: auto;
-  background-image: linear-gradient(to right, #6363ec, #060641);
+  background-image: linear-gradient(to right, rgb(99, 99, 236), rgb(6, 6, 65));
   width: 100%;
   padding: 3px;
   transition: 0.3s;
@@ -310,7 +233,7 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 5px;
   font-size: 2rem;
   transition: 0.2s;
-  color: #a2ddff;
+  color: rgb(162, 221, 255);
   letter-spacing: 1px;
 }
 .container nav .dropd {
@@ -353,20 +276,20 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .container nav .dropd .search label {
   margin-right: 4px;
-  background-color: #375cd4;
+  background-color: rgb(55, 92, 212);
   padding: 2px 5px;
   border-radius: 4px;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   transition: 0.3s;
   cursor: pointer;
-  box-shadow: 1px 1px 2px #020a30;
+  box-shadow: 1px 1px 2px rgb(2, 10, 48);
 }
 .container nav .dropd .search label:hover {
-  box-shadow: 2px 2px 3px #020a30;
-  background-color: #5072e2;
+  box-shadow: 2px 2px 3px rgb(2, 10, 48);
+  background-color: rgb(80, 114, 226);
 }
 .container nav .dropd .search label:hover ~ input {
-  box-shadow: 2px 2px 3px #020a30;
+  box-shadow: 2px 2px 3px rgb(2, 10, 48);
 }
 .container nav .dropd .search input {
   color: black;
@@ -376,8 +299,8 @@ body::-webkit-scrollbar-thumb:hover {
   border: 0;
   padding: 2px;
   transition: 0.3s;
-  background-color: #c8d3f8;
-  box-shadow: 1px 1px 2px #020a30;
+  background-color: rgb(200, 211, 248);
+  box-shadow: 1px 1px 2px rgb(2, 10, 48);
 }
 .container nav .dropd .login {
   width: 13%;
@@ -388,17 +311,17 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .container nav .dropd .login h3 {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #375cd4;
+  background-color: rgb(55, 92, 212);
   padding: 5px 10px;
   border-radius: 5px;
   transition: 0.3s;
-  color: #2bc7ba;
-  box-shadow: 1px 1px 2px #020a30;
+  color: rgb(43, 199, 186);
+  box-shadow: 1px 1px 2px rgb(2, 10, 48);
 }
 .container nav .dropd .login h3:hover {
-  background-color: #5072e2;
-  color: #00eb33;
-  box-shadow: 2px 2px 3px #020a30;
+  background-color: rgb(80, 114, 226);
+  color: rgb(0, 235, 51);
+  box-shadow: 2px 2px 3px rgb(2, 10, 48);
 }
 .container nav .bks-tmb {
   display: none;
@@ -406,7 +329,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 @media only screen and (max-width: 768px) {
   .container nav {
-    background-image: linear-gradient(to right, #2424d4, #2424d4);
+    background-image: linear-gradient(to right, rgb(36, 36, 212), rgb(36, 36, 212));
     position: fixed;
     display: flex;
     flex-direction: row;
@@ -427,7 +350,7 @@ body::-webkit-scrollbar-thumb:hover {
     right: 0;
     opacity: 0;
     top: 50px;
-    background-image: linear-gradient(to right, #2424d4, #2424d4);
+    background-image: linear-gradient(to right, rgb(36, 36, 212), rgb(36, 36, 212));
     width: 0;
     z-index: 100;
     transition: 0.3s;
@@ -455,7 +378,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .container nav .dropd .search label:hover {
     box-shadow: none;
-    background-color: #5072e2;
+    background-color: rgb(80, 114, 226);
   }
   .container nav .dropd .search label:hover ~ input {
     box-shadow: none;
@@ -514,7 +437,7 @@ body::-webkit-scrollbar-thumb:hover {
   }
   .container nav .dropd .search label:hover {
     box-shadow: none;
-    background-color: #5072e2;
+    background-color: rgb(80, 114, 226);
   }
   .container nav .dropd .search label:hover ~ input {
     box-shadow: none;
@@ -550,7 +473,7 @@ body::-webkit-scrollbar-thumb:hover {
   grid-gap: 5px;
 }
 .container main .Cmain {
-  background-color: #7d9bee;
+  background-color: rgb(116, 151, 248);
 }
 .container main .content {
   grid-column: 1/5;
@@ -559,24 +482,40 @@ body::-webkit-scrollbar-thumb:hover {
 .container main .content .bagian-atas-content {
   width: 100%;
   height: 30px;
-  background-image: linear-gradient(to right, #6a6afd, black);
+  background-image: linear-gradient(to right, rgb(106, 106, 253), black);
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   margin-bottom: 5px;
   box-shadow: 0 2px 1px black;
+  position: relative;
 }
 .container main .content .bagian-atas-content li {
   padding: 0 5px;
-  color: white;
+  color: rgb(255, 255, 255);
+}
+.container main .content .bagian-atas-content li:hover {
+  color: yellowgreen;
+}
+.container main .content .bagian-atas-content .setting {
+  position: absolute;
+  right: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.container main .content .bagian-atas-content .setting i {
+  transition: 0.2s;
+}
+.container main .content .bagian-atas-content .setting:hover i {
+  transform: rotate(-90deg);
 }
 .container main .content .containerC {
   width: 100%;
   box-shadow: 0 2px 1px black;
   margin-bottom: 5px;
   overflow: hidden;
-  background-color: #4b6fd1;
+  background-color: rgb(75, 111, 209);
 }
 .container main .content .containerC .caption {
   display: flex;
@@ -587,7 +526,7 @@ body::-webkit-scrollbar-thumb:hover {
 .container main .content .containerC .caption h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
   padding: 5px;
-  color: #b4beffef;
+  color: rgba(180, 190, 255, 0.937254902);
   letter-spacing: 1px;
 }
 .container main .content .containerC .caption a {
@@ -596,7 +535,7 @@ body::-webkit-scrollbar-thumb:hover {
   letter-spacing: 1px;
 }
 .container main .content .containerC .caption a:hover {
-  color: #d4d9fbef;
+  color: rgba(212, 217, 251, 0.937254902);
 }
 .container main .content .containerC .daftar-blog-teknologi {
   width: 100%;
@@ -616,7 +555,7 @@ body::-webkit-scrollbar-thumb:hover {
   background: #1d1c1c;
 }
 .container main .content .containerC .daftar-blog-teknologi li {
-  background-image: linear-gradient(to right, #6a6afd, black);
+  background-image: linear-gradient(to right, rgb(106, 106, 253), black);
   color: #fff;
   width: 202px;
   font-size: 0.8rem;
@@ -626,7 +565,7 @@ body::-webkit-scrollbar-thumb:hover {
   display: inline-block;
   margin-right: 6px;
   margin-bottom: 5px;
-  box-shadow: 2px 2px 3px black;
+  box-shadow: 2px 2px 3px rgb(0, 0, 0);
 }
 .container main .content .containerC .daftar-blog-teknologi li .tgl-up {
   display: flex;
@@ -634,7 +573,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: space-between;
   align-items: center;
   padding: 2px;
-  background-image: linear-gradient(to right, #6a6afd, black);
+  background-image: linear-gradient(to right, rgb(106, 106, 253), black);
 }
 .container main .content .containerC .daftar-blog-teknologi li .tgl-up p span {
   color: yellow;
@@ -653,7 +592,7 @@ body::-webkit-scrollbar-thumb:hover {
   justify-content: center;
   align-items: center;
   font-size: 1.1rem;
-  color: #26ff00;
+  color: rgb(38, 255, 0);
   padding: 3px;
   height: max-content;
 }
@@ -664,17 +603,17 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #adadff;
-  color: #343434;
+  background-color: rgb(173, 173, 255);
+  color: rgb(52, 52, 52);
   font-weight: bold;
   transition: 0.2s;
 }
 .container main .content .containerC .daftar-blog-teknologi li .button:hover {
-  background-color: #7a7aff;
+  background-color: rgb(122, 122, 255);
   color: white;
 }
 .container main .content .containerC .daftar-blog-teknologi li:hover {
-  box-shadow: 2px 2px 3px white;
+  box-shadow: 2px 2px 3px rgb(255, 255, 255);
 }
 .container main .content .containerC .daftar-blog-teknologi li:hover .c-img img {
   transform: scale(1.1);
@@ -688,7 +627,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .container main aside ul {
   margin-bottom: 5px;
-  background-image: linear-gradient(to right, rgba(39, 17, 238, 0.973), #02000a);
+  background-image: linear-gradient(to right, rgba(39, 17, 238, 0.973), rgb(2, 0, 10));
 }
 .container main aside ul h3 {
   text-align: center;
@@ -704,16 +643,16 @@ body::-webkit-scrollbar-thumb:hover {
   padding: 5px;
 }
 .container main aside ul li a {
-  color: #eaeaea;
+  color: rgb(234, 234, 234);
 }
 .container main aside ul li:hover a {
-  color: #ffff9d;
+  color: rgb(255, 255, 157);
   text-decoration: underline;
 }
 .container main aside .iklan1 {
   width: 100%;
   height: 250px;
-  background-image: linear-gradient(to right, rgba(39, 17, 238, 0.973), #02000a);
+  background-image: linear-gradient(to right, rgba(39, 17, 238, 0.973), rgb(2, 0, 10));
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -728,7 +667,7 @@ body::-webkit-scrollbar-thumb:hover {
   grid-gap: 5px;
 }
 .container .rekomen .rkm {
-  background-color: #809291;
+  background-color: rgb(128, 146, 145);
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -741,7 +680,7 @@ body::-webkit-scrollbar-thumb:hover {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #312f2f;
+  background-color: rgb(49, 47, 47);
 }
 .container footer .icon-sosial-media {
   width: 100%;
@@ -755,21 +694,21 @@ body::-webkit-scrollbar-thumb:hover {
   transition: 0.2s;
   cursor: pointer;
   padding: 8px;
-  color: #959595;
+  color: rgb(149, 149, 149);
 }
 .container footer .icon-sosial-media i:hover {
-  color: white;
+  color: rgb(255, 255, 255);
   transform: rotate(5deg);
 }
 .container footer .disclaimer {
   width: 80%;
-  color: #7b7b7a;
+  color: rgb(123, 123, 122);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border-top: 1px solid #414141;
-  border-bottom: 1px solid #3f3e3e;
+  border-top: 1px solid rgb(65, 65, 65);
+  border-bottom: 1px solid rgb(63, 62, 62);
   border-radius: 20px;
   padding: 5px;
   user-select: text;
@@ -852,4 +791,81 @@ body::-webkit-scrollbar-thumb:hover {
     grid-column: 4/6;
     grid-row: 2;
   }
+}
+
+.menuSetting {
+  position: fixed;
+  width: 70%;
+  height: 70%;
+  background-image: linear-gradient(to right, rgba(39, 17, 238, 0.973), rgb(209, 217, 250));
+  z-index: 99999;
+  top: 100px;
+  border-radius: 10px;
+  overflow: hidden;
+  color: #fff;
+  display: none;
+  border: 1px solid black;
+}
+.menuSetting .bj {
+  background-image: linear-gradient(to right, rgba(26, 15, 133, 0.973), rgb(0, 4, 19));
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 5px;
+  box-shadow: 0 1px 2px black;
+}
+.menuSetting .bj h3 {
+  padding: 0 5px;
+  letter-spacing: 1px;
+}
+.menuSetting .bj i {
+  padding: 0 5px;
+  cursor: pointer;
+  transition: 0.2s;
+  border-radius: 50%;
+}
+.menuSetting .bj i:hover {
+  transform: rotate(90deg);
+  color: yellow;
+}
+.menuSetting .ukuranLayar {
+  background-color: rgb(201, 198, 255);
+  width: max-content;
+  overflow: hidden;
+}
+.menuSetting .ukuranLayar h4 {
+  background-color: rgb(11, 42, 116);
+  color: rgb(218, 213, 213);
+  text-align: center;
+  box-shadow: 1px 1px 2px black;
+}
+.menuSetting .ukuranLayar div {
+  display: flex;
+}
+.menuSetting .ukuranLayar div p {
+  margin: 3px 5px;
+  padding: 2px 4px;
+  border-radius: 5px;
+  background-color: rgb(56, 95, 194);
+}
+.menuSetting .ukuranLayar div p:nth-child(1) {
+  margin-right: 20px;
+}
+.menuSetting .ukuranLayar div .tbl {
+  cursor: pointer;
+  background-color: rgb(35, 69, 156);
+}
+.menuSetting .ukuranLayar div .tbl:hover {
+  color: yellow;
+  box-shadow: 1px 1px 2px black;
+}
+.menuSetting .ukuranLayar div .aktifScreen {
+  color: yellow;
+  box-shadow: 1px 1px 2px black;
+  background-color: rgb(12, 26, 61);
+}
+
+.display {
+  display: block;
 }/*# sourceMappingURL=main.css.map */

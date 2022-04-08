@@ -3,10 +3,17 @@
     @include reset(); 
 }
 
+
+// color background
+$base-color: yellow;
+
+
 body{
-    background-color: rgb(205, 199, 245);
+    background-color: $base-color;
+    background-color: rgb(169, 176, 255);
     user-select: none;
     overflow-x: hidden;
+    @include disp-flex(flex-start,center,column);
     &::-webkit-scrollbar {
         width: 10px;                
     }
@@ -102,13 +109,14 @@ body{
                 }
             }
         }
-        // --------------------------------------------------!!!!
-        .hro2{
+
+
+        // -------------------------------------------------- hro2 & hro3
+        .hro2, .hro3{
             @include disp-flex(flex-start,center,column);
             position: relative;
             overflow: hidden;
             cursor: pointer;
-            // transition: .50s;
             .timeUp{
                 width: 100%;
                 height: 5%;
@@ -131,7 +139,6 @@ body{
                 background-color: rgb(123, 154, 248);
                 overflow: hidden;
                 position: relative;
-                // @include linegrad(rgba(15, 25, 167, 0.257),rgba(0, 0, 0, 0.62));
                 transition: .40s;
                 img{
                     width: 100%;
@@ -149,6 +156,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 z-index: 1;
+                @include linegrad(rgba(50, 64, 255, 0.413),rgb(0, 0, 0));
                 h3{
                     padding: 4px;
                     color: yellow;
@@ -163,6 +171,7 @@ body{
                     filter: drop-shadow(0 0 2px black);
                     transition: .50s;
                     padding: 2px;
+                    @include linegrad(rgba(8, 16, 121, 0.485),rgba(0, 0, 0, 0.62));
                 }
             }
             &:hover{
@@ -189,94 +198,30 @@ body{
                 }
             }
         }
-        .hro3{
-            @include disp-flex(flex-start,center,column);
-            position: relative;
-            overflow: hidden;
-            cursor: pointer;
-            .timeUp{
-                width: 100%;
-                height: 5%;
-                @include linegrad(rgb(50, 64, 255),rgb(0, 0, 0));
-                @include disp-flex(space-between,center);
-                font-size: .8rem;
-                span{
-                    color: wheat;
-                    
-                    padding: 2px;
-                    box-sizing: border-box;
-                }
-                p{
-                    color: aliceblue;
-                }
-            }
-            .img{
-                width: 100%;
-                height: 100%;
-                background-color: rgb(123, 154, 248);
-                overflow: hidden;
-                position: relative;
-                @include linegrad(rgba(15, 25, 167, 0.257),rgba(0, 0, 0, 0.62));
-                transition: .40s;
-                // border-radius: 5px;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    transition: .70s;
-                    margin: 0;
-                    transform: scale(1.1);
-                } 
-            }
-            .keterangan{
-                position: absolute;
-                bottom: 0;
-                color: white;
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                z-index: 2;
-                h3{
-                    padding: 4px;
-                    color: yellow;
-                    letter-spacing: 1px;
-                    filter: drop-shadow(0 0 2px black);
-                    text-align: center;
-                }
-                p{
-                    text-align: start;
-                    letter-spacing: 1px;
-                    color: rgb(225, 225, 225);
-                    filter: drop-shadow(0 0 2px black);
-                    transition: .50s;
-                    padding: 2px;                   
-                }
-            }
-            &:hover{
-                .img{
-                    img{
-                        transform: scale(1.2);
-                    }
-                    &::before{
-                        content: '';
-                        position: absolute;
-                        top: 0;
-                        left: 0;
-                        bottom: 0;
-                        right: 0;
-                        @include linegrad(rgba(15, 25, 167, 0.257),rgba(0, 0, 0, 0.62));
-                        z-index: 1;
-                    }
-                }
-                .keterangan{
-                    
-                    p{
-                        color: rgb(255, 255, 255);
-                        @include linegrad(rgba(8, 16, 121, 0.485),rgba(0, 0, 0, 0.62));
-                    }
-                }
-            }
-        }
+
     }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // --- AKHIR HERO IMG
     // ---------------------------------------------------------------------------navbar
     nav{
@@ -516,7 +461,7 @@ body{
         grid-row: 3;
         @include grid-c(repeat(6,1fr), minmax(300px,auto));
         .Cmain{
-            background-color: rgb(125, 155, 238);
+            background-color: rgb(116, 151, 248);
         }
         .content{
             grid-column: 1/5;
@@ -529,9 +474,25 @@ body{
                 @include disp-flex(flex-start,center);
                 margin-bottom: 5px;
                 box-shadow:0 2px 1px black;
+                position: relative;
                 li{
                     padding: 0 5px;
                     color: rgb(255, 255, 255);
+                    &:hover{
+                        color: yellowgreen;
+                    }
+                }
+                .setting{
+                    position: absolute;
+                    right: 5px;
+                    cursor: pointer;
+                    transition: .30s;
+                    i{
+                        transition: .20s;
+                    }
+                    &:hover i{
+                        transform: rotate(-90deg);
+                    }
                 }
             }
             // ============================================================= TEKNOLOGI , ENTERTEIN , OTOMOTIF
@@ -750,10 +711,6 @@ body{
 
 
 
-
-
-
-
     // ------------------------------------------------------------------------- responsive
     @media only screen and (max-width: 768px){
         nav{
@@ -795,4 +752,103 @@ body{
             }
         }
     }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.menuSetting{
+    position: fixed;
+    width: 70%;
+    height: 70%;
+    @include linegrad(rgb(39, 17, 238, 0.973),rgb(209, 217, 250) );
+    z-index: 99999;
+    top: 100px;
+    border-radius: 10px;
+    overflow: hidden;
+    color: #fff;
+    display: none;
+    border: 1px solid black;
+    .bj{
+        @include linegrad(rgba(26, 15, 133, 0.973),rgb(0, 4, 19) );
+        @include disp-flex(space-between,center);
+        margin-bottom: 5px;
+        box-shadow: 0 1px 2px black;
+        h3{
+            padding: 0 5px;
+            letter-spacing: 1px;
+        }
+        i{
+            padding: 0 5px;
+            cursor: pointer;
+            transition: .20s;
+            border-radius: 50%;
+            &:hover{
+                transform:rotate(90deg);
+                color: yellow;
+            }
+        }
+    }
+    // ukuran layar
+    .ukuranLayar{
+        background-color: rgb(201, 198, 255);
+        width: max-content;
+        // margin: 5px;
+        overflow: hidden;
+        h4{
+            background-color: rgb(11, 42, 116);
+            color: rgb(218, 213, 213);
+            text-align: center;
+            box-shadow: 1px 1px 2px black;
+        }
+        div{
+            display: flex;
+            p{
+                margin: 3px 5px;
+                padding: 2px 4px;
+                border-radius: 5px;
+                background-color: rgb(56, 95, 194);
+            }
+            p:nth-child(1){
+                margin-right: 20px;
+            }
+            .tbl{
+                cursor: pointer;
+                background-color: rgb(35, 69, 156);
+                &:hover{
+                    color: yellow;
+                    box-shadow: 1px 1px 2px black;
+                }
+            }
+            .aktifScreen{
+                color: yellow;
+                box-shadow: 1px 1px 2px black;
+                background-color: rgb(12, 26, 61);
+            }
+        }
+    }
+
+
+
+
+
+
+}
+.display{
+    display: block;
 }
