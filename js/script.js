@@ -1,3 +1,8 @@
+
+
+
+
+
 // ------------------------------------------------------------- dropdown & burger menu
 const dropd=document.getElementById('dropd')
 
@@ -6,6 +11,9 @@ burger.addEventListener('click',function(){
     dropd.classList.toggle('muncul')
     burger.classList.toggle('putar')
 })
+// --
+
+
 
 // --------------------------------------------------------------- img slide (hero img)
 let heroImg = document.getElementById('heroImg')
@@ -55,8 +63,28 @@ next.addEventListener('click',function(){
     heroImg.src= `assets/hero-img/${nameImg[urutanImg]}`
 })
 
+// --------- titik
+// titik.addEventListener('click',function(){     !!!!!!!!!!!!
+//     alert('berhasil ')
+// })
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // ----------------------------- menu setting
-let menuSetting = document.getElementById('menuSetting')
+let menuSetting = document.getElementById('mydiv')
 let setting = document.getElementById('setting')
 let closeSetting = document.getElementById('closeSetting')
 setting.addEventListener('click',function(){
@@ -89,7 +117,7 @@ function openFullscreen() {
     }
     
 }
- 
+  
 /* Function to close fullscreen mode */
 function closeFullscreen() {
     closeS.classList.add('aktifScreen')
@@ -106,9 +134,100 @@ function closeFullscreen() {
     
 }
   
+
+
 if(window == onerror){
   alert(`ada yang salah`)
 }
+
+
 function gagal(){
   console.log(`gagal`)
+}
+
+
+// color navbar
+let nav = document.getElementById('nav')
+function navbarFunc(e){
+  nav.style.setProperty('--bgNav',e)
+}
+
+let Cmain = document.getElementById('Cmain')
+let hro2 = document.getElementById('hro2')
+let hro3 = document.getElementById('hro3')
+let bac = document.getElementById('bac')
+let arr = [Cmain,hro2,hro3,bac]
+
+function bgc(e){
+  arr.forEach(function(f){
+    f.style.setProperty('--bgColor',e)
+  })
+  // Cmain
+}
+
+let conten = document.getElementById('conten')
+function contenF(e){
+  conten.style.setProperty('--bgContent',e)
+}
+
+
+
+
+function fontColor(e){
+  let semuaP = document.querySelectorAll('.fontC')
+  semuaP.forEach(function(f){
+    f.style.setProperty('--fontColor',e)
+  })
+}
+
+
+
+
+
+
+
+
+// --------------------------------------------------------------- drag menu settings
+// Make the DIV element draggable:
+dragElement(document.getElementById("mydiv"));
+
+function dragElement(elmnt) {
+  var pos1 = 0, pos2 = 0, pos3 = 0, pos4 = 0;
+  if (document.getElementById(elmnt.id + "header")) {
+    // if present, the header is where you move the DIV from:
+    document.getElementById(elmnt.id + "header").onmousedown = dragMouseDown;
+  } else {
+    // otherwise, move the DIV from anywhere inside the DIV:
+    elmnt.onmousedown = dragMouseDown;
+  }
+
+  function dragMouseDown(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // get the mouse cursor position at startup:
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    document.onmouseup = closeDragElement;
+    // call a function whenever the cursor moves:
+    document.onmousemove = elementDrag;
+  }
+
+  function elementDrag(e) {
+    e = e || window.event;
+    e.preventDefault();
+    // calculate the new cursor position:
+    pos1 = pos3 - e.clientX;
+    pos2 = pos4 - e.clientY;
+    pos3 = e.clientX;
+    pos4 = e.clientY;
+    // set the element's new position:
+    elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
+    elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
+  }
+
+  function closeDragElement() {
+    // stop moving when mouse button is released:
+    document.onmouseup = null;
+    document.onmousemove = null;
+  }
 }
