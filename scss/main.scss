@@ -2,12 +2,24 @@
 *{
     @include reset(); 
 }
-// color background
-$base-color: yellow;
+
+
+// variable color background
+$bg-card: linear-gradient(to right, var(--p1, #3550bd), var(--p2, #01041a));
+$bg-color: var(--bgColor,#4040da);
+$bg-body: var(--bgBody,#8cbefa);
+$bg-conten: var(--bgContent,#4b6fd1);
+$bg-nav:var(--bgNav,#070770);
+$font-color:var(--fontColor,#ffffff);
+
+
+
+
+
 
 body{
-    background-color: $base-color;
-    background-color: rgb(169, 176, 255);
+    // background-color: $base-color;
+    background-color: $bg-body;
     user-select: none;
     overflow-x: hidden;
     @include disp-flex(flex-start,center,column);
@@ -22,6 +34,7 @@ body{
         background: #232f7d; 
     }
 }
+
 .container{
     @include w-h(100%,auto);
     @include grid-c($gar:minmax(50px,auto));
@@ -63,20 +76,21 @@ body{
                     background-color: rgba(255, 255, 255, 0.118);
                 }
             }
-            // back
-            .back{
-                left: 0;
+            
+            .tombol-hero{
+                i{
+                    opacity: 30%;
+                }
                 &:hover{
                     box-shadow: 0 2px 4px rgb(0, 0, 0);
+                    opacity: 100%;
                 }
             }
+            // back
+            .back{left: 0;}
             // next
-            .next{
-                right: 0;
-                &:hover{
-                    box-shadow: 0 -2px 4px rgb(0, 0, 0);
-                }
-            }
+            .next{right: 0;}
+
             .titikPage{
                 position: absolute;
                 width: 25%;
@@ -105,6 +119,8 @@ body{
                 }
             }
         }
+
+
         // -------------------------------------------------- hro2 & hro3
         .hro2, .hro3{
             @include disp-flex(flex-start,center,column);
@@ -114,7 +130,8 @@ body{
             .timeUp{
                 width: 100%;
                 height: 5%;
-                @include linegrad(rgb(50, 64, 255),rgb(0, 0, 0));
+                background-color: $bg-color;
+                // @include linegrad(rgb(50, 64, 255),rgb(255, 253, 253));
                 @include disp-flex(space-between,center);
                 font-size: .8rem;
                 span{
@@ -124,7 +141,7 @@ body{
                     box-sizing: border-box;
                 }
                 p{
-                    color: aliceblue;
+                    color: $font-color;
                 }
             }
             .img{
@@ -150,7 +167,7 @@ body{
                 display: flex;
                 flex-direction: column;
                 z-index: 1;
-                @include linegrad(rgba(50, 64, 255, 0.413),rgb(0, 0, 0));
+                @include linegrad(rgba(16, 24, 130, 0.576),rgb(0, 0, 0));
                 h3{
                     padding: 4px;
                     color: yellow;
@@ -161,11 +178,12 @@ body{
                 p{
                     text-align: start;
                     letter-spacing: 1px;
-                    color: rgb(225, 225, 225);
+                    color: $font-color;
                     filter: drop-shadow(0 0 2px black);
                     transition: .50s;
                     padding: 2px;
-                    @include linegrad(rgba(8, 16, 121, 0.485),rgba(0, 0, 0, 0.62));
+                    @include linegrad(rgba(8, 16, 121, 0.934),rgba(0, 0, 0, 0.62));
+                    background-image: $bg-color;
                 }
             }
             &:hover{
@@ -196,6 +214,8 @@ body{
     }
 
 
+    // color: var(--afterBack, #5569ff);
+
 // --- AKHIR HERO IMG
     // ---------------------------------------------------------------------------navbar
     nav{
@@ -204,7 +224,8 @@ body{
         position: sticky;
         top: 0;
         @include disp-flex();
-        @include linegrad(rgb(99, 99, 236),rgb(6, 6, 65));
+        // @include linegrad(rgb(99, 99, 236),rgb(6, 6, 65));
+        background-color: $bg-nav;
         width: 100%;
         padding: 3px;
         transition: .30s;
@@ -434,9 +455,9 @@ body{
         grid-column: 1;
         grid-row: 3;
         @include grid-c(repeat(6,1fr), minmax(300px,auto));
-        .Cmain{
-            background-color: rgb(116, 151, 248);
-        }
+        // .Cmain{
+        //     background-color: rgb(116, 151, 248);
+        // }
         .content{
             grid-column: 1/5;
             grid-row: 1;
@@ -444,14 +465,15 @@ body{
             .bagian-atas-content{
                 width: 100%;
                 height: 30px;
-                @include linegrad(rgb(106, 106, 253),black );
+                // @include linegrad(rgb(106, 106, 253),black );
+                background-color: $bg-color;
                 @include disp-flex(flex-start,center);
                 margin-bottom: 5px;
                 box-shadow:0 2px 1px black;
                 position: relative;
                 li{
                     padding: 0 5px;
-                    color: rgb(255, 255, 255);
+                    color: $font-color;
                     &:hover{
                         color: yellowgreen;
                     }
@@ -475,7 +497,7 @@ body{
                 box-shadow:0 2px 1px black;
                 margin-bottom: 5px;
                 overflow: hidden;
-                background-color: rgb(75, 111, 209);
+                background-color: $bg-conten;
                 .caption{
                     @include disp-flex(space-between,center);
                     h3{
@@ -512,7 +534,8 @@ body{
                         
                     }
                     li{
-                        @include linegrad(rgb(106, 106, 253),black );
+                        // @include linegrad(rgb(106, 106, 253),black );
+                        background-image: $bg-card;
                         color: #fff;
                         width: 202px;
                         font-size: .8rem;
@@ -526,7 +549,7 @@ body{
                         .tgl-up{
                             @include disp-flex(space-between,center);
                             padding: 2px;
-                            @include linegrad(rgb(106, 106, 253),black );
+                            // @include linegrad(rgb(106, 106, 253),black );
                             p span{
                                 color: yellow;
                             }
@@ -578,7 +601,8 @@ body{
             font-family: 'Exo 2', sans-serif;
             ul{
                 margin-bottom: 5px;
-                @include linegrad(rgb(39, 17, 238, 0.973),rgb(2, 0, 10) );
+                // @include linegrad(rgb(39, 17, 238, 0.973),rgb(2, 0, 10) );
+                background-color: $bg-color;
                 h3{
                     text-align: center;
                     box-shadow: 0 2px 2px black;
@@ -592,7 +616,7 @@ body{
                     text-align: center;
                     padding: 5px;
                     a{
-                        color: rgb(234, 234, 234);
+                        color: $font-color;
                     }
                     &:hover{
                         a{
@@ -605,7 +629,7 @@ body{
             .iklan1{
                 width: 100%;
                 height: 250px;
-                @include linegrad(rgb(39, 17, 238, 0.973),rgb(2, 0, 10) );
+                background-color: $bg-color;
                 @include disp-flex(center,center);
             }
         }
@@ -683,6 +707,8 @@ body{
         }
     }
 
+
+
     // ------------------------------------------------------------------------- responsive
     @media only screen and (max-width: 768px){
         nav{
@@ -726,7 +752,10 @@ body{
     }
 }
 
-// ------------------------------- menu settings
+
+
+
+
 .menuSetting{
     position: fixed;
     width: 70%;
@@ -744,9 +773,11 @@ body{
         @include disp-flex(space-between,center);
         margin-bottom: 5px;
         box-shadow: 0 1px 2px black;
+        cursor: move;
         h3{
             padding: 0 5px;
             letter-spacing: 1px;
+            
         }
         i{
             padding: 0 5px;
@@ -763,7 +794,7 @@ body{
     .ukuranLayar{
         background-color: rgb(201, 198, 255);
         width: max-content;
-        // margin: 5px;
+        margin-bottom: 10px;
         overflow: hidden;
         h4{
             background-color: rgb(11, 42, 116);
@@ -797,7 +828,41 @@ body{
             }
         }
     }
-// tampilan popup menu settings
+
+
+    // bungkus settitng color
+    .bungkusSettingColor{
+        background-color: rgb(56, 95, 194);
+        width: max-content;
+        overflow: hidden;
+        h4{
+            background-color: rgb(11, 42, 116);
+            color: rgb(218, 213, 213);
+            text-align: center;
+            box-shadow: 1px 1px 2px black;
+        }
+        ul{
+            @include disp-flex(center,center,column);
+            li{
+                width: 100%;
+                @include disp-flex(space-between,center);
+                
+                label{
+                    @include disp-flex(center,center);
+                    padding: 2px;
+                    cursor: pointer;
+                }
+                input{
+                    cursor: pointer;
+                }
+
+            }
+        }
+        
+    }
+
+
+
 }
 .display{
     display: block;
