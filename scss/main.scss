@@ -2,8 +2,6 @@
 *{
     @include reset(); 
 }
-
-
 // variable color background
 $bg-card: linear-gradient(to right, var(--p1, #3550bd), var(--p2, #01041a));
 $bg-color: var(--bgColor,#4040da);
@@ -11,10 +9,6 @@ $bg-body: var(--bgBody,#8cbefa);
 $bg-conten: var(--bgContent,#4b6fd1);
 $bg-nav:var(--bgNav,#070770);
 $font-color:var(--fontColor,#ffffff);
-
-
-
-
 
 
 body{
@@ -34,7 +28,6 @@ body{
         background: #232f7d; 
     }
 }
-
 .container{
     @include w-h(100%,auto);
     @include grid-c($gar:minmax(50px,auto));
@@ -42,7 +35,8 @@ body{
     header{
         grid-column: 1;
         grid-row: 1;
-        @include grid-c(repeat(5,1fr), minmax(200px,auto));
+        @include grid-c(repeat(5,1fr), minmax(200px));
+        // @include grid-c(repeat(5,1fr),200px);
         position: relative;
         .hro{
             background-color: rgb(203, 221, 241);
@@ -119,8 +113,6 @@ body{
                 }
             }
         }
-
-
         // -------------------------------------------------- hro2 & hro3
         .hro2, .hro3{
             @include disp-flex(flex-start,center,column);
@@ -212,10 +204,7 @@ body{
         }
 
     }
-
-
     // color: var(--afterBack, #5569ff);
-
 // --- AKHIR HERO IMG
     // ---------------------------------------------------------------------------navbar
     nav{
@@ -706,11 +695,64 @@ body{
             }
         }
     }
-
-
-
     // ------------------------------------------------------------------------- responsive
+    @media only screen and (max-width: 1024px){
+        .igrid{
+            .hro{
+                .keterangan{
+                    h3{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: .8rem;
+                    }
+                }
+            }
+            aside{
+                ul li{
+                    font-size: .8rem;
+                }
+            }
+        }
+    }
+
+
+
+
+
     @media only screen and (max-width: 768px){
+        .igrid{
+            .hro{
+                .tombol-hero{
+                    i{
+                        font-size: 1rem;
+                    }
+                }
+                .titikPage .titik{
+                    width: 7px;
+                    height: 7px;
+                }
+                .keterangan{
+                    h3{
+                        font-size: .8rem;
+                    }
+                    p{
+                        font-size: .6rem;
+                    }
+                }
+                .timeUp{
+                    font-size: .7rem;
+                }
+            }
+            aside{
+                ul li{
+                    font-size: .7rem;
+                }
+                ul h3{
+                    font-size: .8rem;
+                }
+            }
+        }
         nav{
             grid-row: 1;
         }
@@ -720,6 +762,7 @@ body{
     }
     @media only screen and (max-width: 570px){
         main{
+            
             .content{
                 grid-column: 1/7;
                 grid-row: 1;
@@ -737,25 +780,98 @@ body{
             grid-row: 2;
             @include grid-c(repeat(5,1fr), minmax(120px,auto));
             .hro1{
-                grid-column: 1/4;
-                grid-row: span 2;
+                grid-column: 1/6;
+                grid-row: span 1;
+                .tombol-hero{
+                    .fa-solid{
+                        font-size: 2rem;
+                        opacity: 100%;
+                    }
+                }
+                .tombol-hero{
+                    i{
+                        opacity: 30%;
+                    }
+                    &:hover{
+                        box-shadow: none;
+                        opacity: 100%;
+                    }
+                }
+                .bg{
+                    background-color: none;
+                    border: none;
+                    box-sizing: border-box;
+                }
             }
             .hro2{
-                grid-column: 4/6;
-                grid-row: 1;
+                grid-column: 1/6;
+                grid-row: 2;
+                .img{
+                    height: 200px;
+                    img{
+                        width: 100%;
+                        height: fit-content;
+                        margin-top: -170px;
+                    }
+                }
+                .keterangan{
+                    left: 0;
+                    right: 0;
+                    .jdl{
+                        font-size: 1.5rem;
+                    }
+                    .fontC{
+                        font-size: 1.2rem;
+                        text-align: center;
+                    }
+                }
             }
             .hro3{
-                grid-column: 4/6;
-                grid-row: 2;
+                grid-column: 1/6;
+                grid-row: 3;
+                .img{
+                    height: 200px;
+                    img{
+                        width: 100%;
+                        height: fit-content;
+                        margin-top: -170px;
+                    }
+                }
+                .keterangan{
+                    left: 0;
+                    right: 0;
+                    .jdl{
+                        font-size: 1.5rem;
+                    }
+                    .fontC{
+                        font-size: 1.2rem;
+                        text-align: center
+                    }
+                }
+            }
+        }
+        main{
+            .content{
+                @include disp-flex(center,center,column);
+            }
+            aside{
+                @include disp-flex(center,center,column);
+                ul{
+                    width: 100%;
+                    li{
+                        #ha3{
+                            font-size: 1.9rem;
+                        }
+                        a{
+                            font-size: 1.1rem;
+                        }
+                        
+                    }
+                }
             }
         }
     }
 }
-
-
-
-
-
 .menuSetting{
     position: fixed;
     width: 70%;
@@ -828,8 +944,6 @@ body{
             }
         }
     }
-
-
     // bungkus settitng color
     .bungkusSettingColor{
         background-color: rgb(56, 95, 194);
@@ -860,9 +974,6 @@ body{
         }
         
     }
-
-
-
 }
 .display{
     display: block;
