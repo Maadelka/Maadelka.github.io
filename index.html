@@ -9,13 +9,16 @@
 </head>
 <body>
 
+
 <!-- popup menu setting -->
-<div class="menuSetting" id="menuSetting">
-    <div class="bj">
-        <h3>MENU SETTING</h3>
+<div class="menuSetting" id="mydiv">
+    <div class="bj" id="mydivheader">
+        <h3 >MENU SETTING</h3>
         <i class="fa-solid fa-xmark fa-2x" id="closeSetting"></i>
+        
     </div>
 
+    <!-- ------------------------------ukuran layar -->
     <div class="ukuranLayar">
         <h4>Screen mode</h4>
         <div>
@@ -24,11 +27,88 @@
             <p onclick="openFullscreen();" id="onS" class="tbl">ON</p>
         </div>
     </div>
+
+
+
+    <!-- change background color -->
+    <div class="bungkusSettingColor">
+        <h4>Theme color</h4>
+        <ul>
+            <li>
+                <label for="background">background</label>
+                <input type="color" id="background" value="#4040da" oninput="bgc(this.value)"">
+            </li>
+            <li>
+                <label for="navbar">navbar</label>
+                <input type="color" id="navbar" value="#070770" oninput="navbarFunc(this.value)">
+            </li>
+            <li>
+                <label for="main">content</label>
+                <input type="color" id="main" value="#4b6fd1" oninput="contenF(this.value)">
+            </li>
+            <li>
+                <label for="font">Font color</label>
+                <input type="color" id="font" value="#4b6fd1" oninput="fontColor(this.value)">
+            </li>
+        </ul>
+    </div>
+
+
 </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ex -->
+<div class="container1">
+    <div class="example"></div>
+    <div class="example"></div>
+    <div class="example"></div>
+</div>
+
+<div class="container2">
+    <div class="example"></div>
+    <div class="example"></div>
+    <div class="example"></div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 <div class="container">
 <!---------------------------------------------------------------------------------header  -->
-    <header class="igrid">
+    <header class="igrid" >
 
         <!--  hero1 -->
         <div class="hro hro1">
@@ -48,7 +128,7 @@
             </div>
         </div>
         <!--  hero2 -->
-        <div class="hro hro2">
+        <div class="hro hro2" id="hro2">
             <div class="timeUp">
                 <span id="waktu-upload">sab,2 apr 2022</span>
                 <p>views : <span>73k</span></p>
@@ -56,10 +136,10 @@
             <div class="img"><img src="assets/s-hero/stick.jpg" alt=""></div>
             <div class="keterangan">
                 <h3>5 Game Consol Terbaik</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, commodi autem iure debitis aspernatur soluta dolore</p>
+                <p id="pHero1" class="fontC">daftar 5 game console terbaik di tahun 2022 yang dapat di download secara gratis</p>
             </div>
         </div>
-        <div class="hro hro3">
+        <div class="hro hro3" id="hro3">
             <div class="timeUp">
                 <span id="waktu-upload">sab,2 apr 2022</span>
                 <p>views : <span>439k</span></p>
@@ -67,20 +147,20 @@
             <div class="img"><img src="assets/s-hero/w11.jpg" alt=""></div>
             <div class="keterangan">
                 <h3>Spesifikasi PC Minimal Windows 11</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis, commodi autem iure debitis asperna</p>
+                <p id="pHero2" class="fontC">Spesifikasi device apa saja yang suport untuk menjalankan OS windows 11</p>
             </div>
         </div>
     </header>
 
 <!-- -------------------------------------------------------------------------------- navbar -->
-    <nav class="igrid">
+    <nav class="igrid" id="nav">
             <!-- logo / name brand -->
         <div class="logo">
             <a href=""><h1>Wamors</h1></a> 
         </div>
         <div class="dropd" id="dropd">
             <!-- menubar -->
-            <ul>
+            <ul id="pSubmenu">
                 <a href="">
                     <li class="aktif">Home</li>
                 </a>
@@ -112,16 +192,16 @@
     <!-- ----------------------------------------------------------------------------- main -->
     <main class="igrid">
         <!-- ---content -->
-        <div class=" Cmain content">
+        <div class=" Cmain content" id="conten">
 
             <!-- content bagian atas -->
-            <ul class="bagian-atas-content">
-                <li>example</li>
-                <li>example</li>
-                <li>example</li>
-                <li>example</li>
-                <li>example</li>
-                <li class="setting" id="setting"><i class="fa-solid fa-gears"></i> setting</li>
+            <ul class="bagian-atas-content" id="bac" >
+                <li class="fontC">example</li>
+                <li class="fontC">example</li>
+                <li class="fontC">example</li>
+                <li class="fontC">example</li>
+                <li class="fontC">example</li>
+                <li class="setting fontC" id="setting"><i class="fa-solid fa-gears"></i> setting</li>
             </ul>
             <!-- ----------------------------- TEKNOLOGI -->
             <div class="containerC teknologi">
@@ -131,8 +211,6 @@
                 </div>
                 <ul class="daftar-blog-teknologi card-daftar">
                 
-                    
-                    <!----------------------------------------------- example card ,, before use api json-->
                     <li>
                         <div class="tgl-up">
                             <p>02/04/2022</p>
@@ -271,8 +349,8 @@
             </div>
         </div>
         <!-- ----------------------------------------------------------------------- aside -->
-        <aside class="Cmain">
-            <ul>
+        <aside class="Cmain" id="Cmain" >
+            <ul id="pAside1" class="fontC">
                 <h3>tips & trick</h3>
                 <li><a href="">50 kode Cheat GTA SA PC Dan Fungsinya</a></li>
                 <li><a href="">Cara Melakukan Aktivasi Pada Windows 10</a></li>
@@ -281,7 +359,7 @@
                 <li><a href="">Microsoft Office 2010 Tutorial</a></li>
                 <li><a href="">Cara Cek Suhu pada Computer dan Laptop</a></li>
             </ul>
-            <ul>
+            <ul id="pAside2" class="fontC">
                 <h3>anime</h3>
                 <li><a href="">Kasus KORUPSI HiRUZEN masih berlanjut</a></li>
                 <li><a href="">Kenapa ZORO Selalu Tersesat ke anime lain ?</a></li>
@@ -290,7 +368,7 @@
                 <li><a href="">Hachi Sudah menemukan MAMA nya</a></li>
                 <li><a href="">spacetoon kembali tanyang gratis di TV</a></li>
             </ul>
-            <ul>
+            <ul id="pAside3" class="fontC">
                 <h3>movie</h3>
                 <li><a href="">KONSPIRASI SPIDERMAN NO WAY HOME<E</a></li>
                 <li><a href="">MULTIVERSE ITU APA ?</a></li>
@@ -344,6 +422,10 @@
         <p>Copyright @2021 | Designed With by <a href="">maadelka.com</a></p>
     </footer>
 </div>
+
+
+
+
 
 <script src="https://kit.fontawesome.com/ca8f778503.js" crossorigin="anonymous" onerror="gagal(this)"></script>
 <script src="js/script.js"></script>
