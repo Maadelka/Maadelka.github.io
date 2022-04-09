@@ -1,8 +1,4 @@
 
-
-
-
-
 // ------------------------------------------------------------- dropdown & burger menu
 const dropd=document.getElementById('dropd')
 
@@ -12,9 +8,6 @@ burger.addEventListener('click',function(){
     burger.classList.toggle('putar')
 })
 // --
-
-
-
 // --------------------------------------------------------------- img slide (hero img)
 let heroImg = document.getElementById('heroImg')
 let back = document.getElementById('back')
@@ -68,21 +61,6 @@ next.addEventListener('click',function(){
 //     alert('berhasil ')
 // })
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // ----------------------------- menu setting
 let menuSetting = document.getElementById('mydiv')
 let setting = document.getElementById('setting')
@@ -93,8 +71,6 @@ setting.addEventListener('click',function(){
 closeSetting.addEventListener('click',function(){
     menuSetting.classList.remove('display')
 })
-
-
 
 // ---------------------------------------------- screen size 
 var elem = document.documentElement;
@@ -134,17 +110,12 @@ function closeFullscreen() {
     
 }
   
-
-
 if(window == onerror){
   alert(`ada yang salah`)
 }
-
-
 function gagal(){
   console.log(`gagal`)
 }
-
 
 // color navbar
 let nav = document.getElementById('nav')
@@ -170,22 +141,12 @@ function contenF(e){
   conten.style.setProperty('--bgContent',e)
 }
 
-
-
-
 function fontColor(e){
   let semuaP = document.querySelectorAll('.fontC')
   semuaP.forEach(function(f){
     f.style.setProperty('--fontColor',e)
   })
 }
-
-
-
-
-
-
-
 
 // --------------------------------------------------------------- drag menu settings
 // Make the DIV element draggable:
