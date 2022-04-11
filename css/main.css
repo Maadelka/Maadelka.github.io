@@ -6,6 +6,10 @@
   text-decoration: none;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: var(--bgBody, #8cbefa);
   user-select: none;
@@ -523,7 +527,7 @@ body::-webkit-scrollbar-thumb:hover {
 }
 .container main .content .containerC .caption h3 {
   font-family: Georgia, "Times New Roman", Times, serif;
-  padding: 5px;
+  padding: 15px;
   color: rgba(180, 190, 255, 0.937254902);
   letter-spacing: 1px;
 }
@@ -1010,4 +1014,54 @@ body::-webkit-scrollbar-thumb:hover {
 
 .display {
   display: block;
+}
+
+.tampilkan-semua {
+  display: none;
+  width: 90%;
+  height: 80%;
+  background-color: #808ef7;
+  position: fixed;
+  border: 1px solid black;
+  z-index: 9999;
+  top: 10%;
+  overflow-y: scroll;
+  border-radius: 10px;
+}
+.tampilkan-semua p {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.tampilkan-semua p i {
+  position: fixed;
+  cursor: pointer;
+  margin: 5px;
+  transition: 0.2s;
+}
+.tampilkan-semua p i:hover {
+  color: yellow;
+  transform: rotate(90deg);
+}
+.tampilkan-semua::-webkit-scrollbar {
+  width: 10px;
+}
+.tampilkan-semua::-webkit-scrollbar-thumb {
+  background: rgb(26, 5, 100);
+  border-radius: 5px;
+}
+.tampilkan-semua::-webkit-scrollbar-thumb:hover {
+  background: #232f7d;
+}
+.tampilkan-semua .exam {
+  height: 1000px;
+}
+
+.ts {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }/*# sourceMappingURL=main.css.map */
