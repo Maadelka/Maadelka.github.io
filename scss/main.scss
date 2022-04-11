@@ -2,6 +2,9 @@
 *{
     @include reset(); 
 }
+html {
+    scroll-behavior: smooth;
+}
 // variable color background
 $bg-card: linear-gradient(to right, var(--p1, #3550bd), var(--p2, #01041a));
 $bg-color: var(--bgColor,#4040da);
@@ -258,6 +261,7 @@ body{
                 .aktif{
                     color: yellow;
                 }
+                
             }
             // search
             .search{
@@ -491,7 +495,7 @@ body{
                     @include disp-flex(space-between,center);
                     h3{
                         font-family: Georgia, 'Times New Roman', Times, serif;
-                        padding: 5px;
+                        padding: 15px;
                         color: #b4beffef;
                         letter-spacing: 1px;
                     }
@@ -715,10 +719,6 @@ body{
             }
         }
     }
-
-
-
-
 
     @media only screen and (max-width: 768px){
         .igrid{
@@ -977,4 +977,56 @@ body{
 }
 .display{
     display: block;
+}
+
+
+// ======================= tampian semua
+.tampilkan-semua{
+    display: none;
+    width: 90%;
+    height: 80%;
+    background-color: #808ef7;
+    position: fixed;
+    border: 1px solid black;
+    z-index: 9999;
+    top: 10%;
+    overflow-y: scroll;
+    border-radius: 10px;
+    
+    p{
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 50%;
+        overflow: hidden;
+        i{
+            position: fixed;
+            cursor: pointer;
+            margin: 5px;
+            transition: .20s;
+            &:hover{
+                color: yellow;
+                transform: rotate(90deg);
+            }
+        }
+    }
+    &::-webkit-scrollbar {
+        width: 10px;                
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgb(26, 5, 100); 
+        border-radius: 5px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: #232f7d; 
+    }
+    .exam{
+        height: 1000px;
+    }
+    // h2{
+
+    // }
+}
+.ts{
+    @include disp-flex(center,center);
 }
