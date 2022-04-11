@@ -1,3 +1,11 @@
+let menu = document.querySelectorAll('.menu')
+let pSubmenu = document.querySelector('#pSubmenu')
+pSubmenu.addEventListener('click',function(e){
+  menu.forEach(function(menu){
+    menu.className = 'menu'
+  })
+  e.target.classList.add('aktif')
+})
 
 // ------------------------------------------------------------- dropdown & burger menu
 const dropd=document.getElementById('dropd')
@@ -9,10 +17,11 @@ burger.addEventListener('click',function(){
 })
 // --
 // --------------------------------------------------------------- img slide (hero img)
-let heroImg = document.getElementById('heroImg')
-let back = document.getElementById('back')
-let next = document.getElementById('next')
-let titik = document.querySelectorAll('.titik')
+let heroImg = document.getElementById('heroImg'),
+    back = document.getElementById('back'),
+    next = document.getElementById('next'),
+    titik = document.querySelectorAll('.titik')
+
 let nameImg = [
     `0.jpg`,
     `1.jpg`,
@@ -56,15 +65,11 @@ next.addEventListener('click',function(){
     heroImg.src= `assets/hero-img/${nameImg[urutanImg]}`
 })
 
-// --------- titik
-// titik.addEventListener('click',function(){     !!!!!!!!!!!!
-//     alert('berhasil ')
-// })
-
 // ----------------------------- menu setting
-let menuSetting = document.getElementById('mydiv')
-let setting = document.getElementById('setting')
-let closeSetting = document.getElementById('closeSetting')
+let menuSetting = document.getElementById('mydiv'),
+    setting = document.getElementById('setting'),
+    closeSetting = document.getElementById('closeSetting')
+
 setting.addEventListener('click',function(){
     menuSetting.classList.add('display')
 })
@@ -123,11 +128,12 @@ function navbarFunc(e){
   nav.style.setProperty('--bgNav',e)
 }
 
-let Cmain = document.getElementById('Cmain')
-let hro2 = document.getElementById('hro2')
-let hro3 = document.getElementById('hro3')
-let bac = document.getElementById('bac')
-let arr = [Cmain,hro2,hro3,bac]
+let Cmain = document.getElementById('Cmain'),
+    hro2 = document.getElementById('hro2'),
+    hro3 = document.getElementById('hro3'),
+    bac = document.getElementById('bac'),
+    arr = [Cmain,hro2,hro3,bac]
+
 
 function bgc(e){
   arr.forEach(function(f){
@@ -147,6 +153,8 @@ function fontColor(e){
     f.style.setProperty('--fontColor',e)
   })
 }
+
+
 
 // --------------------------------------------------------------- drag menu settings
 // Make the DIV element draggable:
@@ -191,4 +199,43 @@ function dragElement(elmnt) {
     document.onmouseup = null;
     document.onmousemove = null;
   }
+}
+
+// add nad remove class view all
+let popp = document.querySelector('.tampilkan-semua')
+let ese =document.getElementById('tSemuaEntertein').onclick = tampilSE
+let tse =document.getElementById('tSemuaTeknologi').onclick = tampilST
+let ose =document.getElementById('tSemuaOtomotif').onclick = tampilSO
+let notif = document.getElementById('notif')
+document.getElementById('hapusS').onclick = hapuss
+
+
+
+// add class ts
+function tampilST(p){
+  p.preventDefault()
+  popp.classList.add('ts')
+  notif.innerHTML= `sabar bos , databases TEKNOLOGI belum ready.... :p`
+  
+}
+
+// add class ts
+function tampilSE(p){
+  p.preventDefault()
+  popp.classList.add('ts')
+  notif.innerHTML= `sabar bos , databases ENTERTEIN belum ready.... :p`
+  
+}
+
+// add class ts
+function tampilSO(p){
+  p.preventDefault()
+  popp.classList.add('ts')
+  notif.innerHTML= `sabar bos , databases OTOMOTIF belum ready.... :p`
+  
+}
+
+// remove class ts
+function hapuss(e){
+  popp.classList.remove('ts')
 }
