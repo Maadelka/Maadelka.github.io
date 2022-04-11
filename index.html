@@ -52,6 +52,15 @@
 </div>
 
 
+
+<!-- =========================== pop up menu tampilkan semua teknologi  -->
+
+<div class="tampilkan-semua">
+    <p id="hapusS"><i class="fa-solid fa-xmark fa-2x" ></i></p>
+    <h2 id="notif"></h2>
+    <div class="exam"></div>
+</div>
+
 <!-- ex -->
 <div class="container1">
     <div class="example"></div>
@@ -65,7 +74,7 @@
     <div class="example"></div>
 </div>
 
-<div class="container">
+<div class="container" id="awal">
 <!---------------------------------------------------------------------------------header  -->
     <header class="igrid" >
 
@@ -120,17 +129,17 @@
         <div class="dropd" id="dropd">
             <!-- menubar -->
             <ul id="pSubmenu">
-                <a href="">
-                    <li class="aktif">Home</li>
+                <a href="#awal">
+                    <li class="menu aktif">Home</li>
+                </a> 
+                <a href="#teknologi" class="menu">
+                    <li class="menu">Teknologi</i></li>
                 </a>
-                <a href="">
-                    <li>Teknologi</i></li>
+                <a href="#entertein">
+                    <li class="menu">Entertein</li>
                 </a>
-                <a href="">
-                    <li>Entertein</li>
-                </a>
-                <a href="">
-                    <li>Otomotif</li>
+                <a href="#otomotif">
+                    <li class="menu">Otomotif</li>
                 </a>
             </ul>
             <!-- search -->
@@ -146,28 +155,34 @@
         <!-- tombol hamburger -->
         <div class="bks-tmb">
             <img src="assets/icon/menu.png" alt="" id="burger">
+            
         </div>
+        <span id="teknologi"></span>
     </nav>
+    
     <!-- ----------------------------------------------------------------------------- main -->
-    <main class="igrid">
+    <main class="igrid" >
+        
         <!-- ---content -->
         <div class=" Cmain content" id="conten">
-
+            
             <!-- content bagian atas -->
             <ul class="bagian-atas-content" id="bac" >
                 <li class="fontC">example</li>
                 <li class="fontC">example</li>
                 <li class="fontC">example</li>
                 <li class="fontC">example</li>
-                <li class="fontC">example</li>
+                <li class="fontC" >example</li>
                 <li class="setting fontC" id="setting"><i class="fa-solid fa-gears"></i> setting</li>
             </ul>
             <!-- ----------------------------- TEKNOLOGI -->
-            <div class="containerC teknologi">
+            <div class="containerC teknologi" >
+                
                 <div class="caption">
                     <h3>TEKNOLOGI</h3>
-                    <a href="">tampilkan semua :::<hr></a>
+                    <a href="" id="tSemuaTeknologi" >tampilkan semua :::<hr></a>
                 </div>
+                
                 <ul class="daftar-blog-teknologi card-daftar">
                 
                     <li>
@@ -217,7 +232,7 @@
                         <div class="judul">5 Setup dekstop terkeren</div>
                         <div class="button">More informasion</div>
                     </li>
-    
+                    
                     <li>
                         <div class="tgl-up">
                             <p>02/04/2022</p>
@@ -240,6 +255,7 @@
                         <div class="judul">5 Setup dekstop terkeren</div>
                         <div class="button">More informasion</div>
                     </li>
+                    
                     <li>
                         <div class="tgl-up">
                             <p>02/04/2022</p>
@@ -262,13 +278,15 @@
                         <div class="judul">5 Setup dekstop terkeren</div>
                         <div class="button">More informasion</div>
                     </li>
+                    <span id="entertein"></span>
                 </ul>
+                
             </div>
             <!-- ------------------------------ENTERTEIN -->
-            <div class="containerC Entertein">
+            <div class="containerC Entertein" >
                 <div class="caption">
                     <h3>ENTERTEIN</h3>
-                    <a href="">tampilkan semua :::<hr></a>
+                    <a href="" id="tSemuaEntertein">tampilkan semua :::<hr></a>
                 </div>
                 <ul class="daftar-blog-teknologi card-daftar">
                     <li>
@@ -282,13 +300,14 @@
                         <div class="judul">5 Setup dekstop terkeren sfdsfsdf</div>
                         <div class="button">More informasion</div>
                     </li>
+                    <span id="otomotif"></span>
                 </ul>
             </div>
             <!-- -------------------------------OTOMOTIF -->
-            <div class="containerC Entertein">
+            <div class="containerC Entertein" >
                 <div class="caption">
                     <h3>OTOMOTIF</h3>
-                    <a href="">tampilkan semua :::<hr></a>
+                    <a href="" id="tSemuaOtomotif" class="tampilSemua">tampilkan semua :::<hr></a>
                 </div>
                 <ul class="daftar-blog-teknologi card-daftar">
                 
